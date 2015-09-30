@@ -24,6 +24,6 @@ $dbs = $mongo_db->user->findOne();
 $dbs['usergroup_id'] = $mongo_db->user->getDBRef(current($dbs['usergroup_id']));
 print_r($dbs);*/
 require_once('./hg-global.php');
-$per = new UserPermission('5606c51fa18994d1768b4567');
+//$per = new UserPermission();
 //var_dump($per);
-var_dump($per->checkback('testing1'));
+//var_dump($per->checkback('testing1'));
