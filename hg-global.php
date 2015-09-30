@@ -3,7 +3,7 @@ define( 'ABS_PATH', dirname(__FILE__) . '/' );
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 date_default_timezone_set( 'UTC' );
 
-require_once('./include/class.userpermission.php');
+require_once('./include/class.hg-userpermission.php');
 
 
 /*if(file_exists(ABS_PATH . 'hg-config.php')) {
