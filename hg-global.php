@@ -11,8 +11,12 @@ require_once('./include/class.hg-userpermission.php');
 }else{
 	
 }*/
-
-$mongo_client = new MongoClient("mongodb://localhost:27017");
-$mongo_db = $mongo_client->selectDB("testing");
-$mongo_db->authenticate("test","113003z");
+try{
+	$mongo_client = new MongoClient("mongodb://localhost:27017");
+	$mongo_db = $mongo_client->selectDB("testing");
+	$mongo_db->authenticate("test","113003");
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+	die();
+}
 ?>
