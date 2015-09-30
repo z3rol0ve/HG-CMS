@@ -1,9 +1,10 @@
 <?php
-define( 'ABS_PATH', dirname(__FILE__) . '/' );
+//define( 'ABS_PATH', dirname(__FILE__) . '/' );
+define( 'ABS_PATH', dirname($_SERVER["PHP_SELF"]) . '/' );
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 date_default_timezone_set( 'UTC' );
 
-require_once('./include/class.hg-userpermission.php');
+require_once(ABS_PATH.'include/class.hg-userpermission.php');
 
 
 /*if(file_exists(ABS_PATH . 'hg-config.php')) {
